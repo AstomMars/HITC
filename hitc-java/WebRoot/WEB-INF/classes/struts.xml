@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<package name="default" namespace="/" extends="struts-default">  
+     <default-action-ref name="gotopage1" />  
+     
+     <action name="index">  
+          <result>index.jsp</result>  
+     </action>  
+     
+     <action name="gotopage1" class="hitc.hitcAction" method="gotoPage1">  
+    	<result name="success">/page1.jsp</result>
+	 </action>
+	 
+	 <action name="zc" class="hitc.hitcAction" method="zc">
+	    <result name="success" type="chain">fillName</result>
+	    <result name="error">/zcFail.jsp</result>
+	 </action>
+	 
+	 
+	<action name="login" class="hitc.hitcAction" method="login">
+	    <result name="success" type ="chain">fillName</result>
+	    <result name="error">/fail.jsp</result>
+	</action>
+     
+     <action name="fillName" class="hitc.hitcAction" method="fillName">
+    	<result>/learn.jsp</result>
+	 </action>
+	 
+	 <action name="result_*" class="hitc.hitcAction" method="resultArtical">
+    	<result name="success">/article-al.jsp</result>
+	 </action>
+	 
+	 <action name="topic_hot_*" class="hitc.hitcAction" method="topicHot">
+	 	<result name="success">learn.jsp</result>
+    	<result name="error">/fail.jsp</result>
+	 </action>
+	 
+	 <action name="topic_branch_*" class="hitc.hitcAction" method=" topicBranch">
+	 	<result name="success">learn.jsp</result>
+    	<result name="error">/fail.jsp</result>
+	 </action>
+	 
+	 <action name="news_hot_*" class="hitc.hitcAction" method="newsHot">
+	 	<result name="success">learn.jsp</result>
+    	<result name="error">/fail.jsp</result>
+	 </action>
+	 
+	 <action name="news_branch_*" class="hitc.hitcAction" method=" newsBranch">
+	 	<result name="success">learn.jsp</result>
+    	<result name="error">/fail.jsp</result>
+	 </action>
+	 
+  </package>
+</struts>    
