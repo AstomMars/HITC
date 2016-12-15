@@ -1,0 +1,90 @@
+
+
+<!-- zui -->
+    <link href="css/zui.min.css" rel="stylesheet">
+	
+<div class="comments">
+  <header>
+    <div class="pull-right"><a href="#commentReplyForm2" class="btn btn-primary"><i class="icon-comment-alt"></i> 发表评论</a></div>
+    <h2>${title}</h2>
+  </header>
+  <section class="comments-list">
+	<div class="comment">
+	<a href="###" class="avatar">
+        <i class="icon-camera-retro icon-2x"></i>
+      </a>
+      <div class="content">
+        <div class="pull-right text-muted">${time}</div>
+        <div><a href="###"><strong>${author}</strong></a></div>
+        <div class="text">${content}</div>
+        <div class="actions">
+          <a href="##">回复</a>
+        </div>
+      </div>
+	</div>
+  
+  
+    <div class="comment">
+      <a href="###" class="avatar">
+        <i class="icon-camera-retro icon-2x"></i>
+      </a>
+      <div class="content">
+        <div class="pull-right text-muted">${time}</div>
+        <div><a href="###"><strong>${author}</strong></a></div>
+        <div class="text">${content}</div>
+        <div class="actions">
+          <a href="##">回复</a>
+        </div>
+      </div>
+      <div class="comments-list">
+	  
+        <div class="comment">
+          <a href="###" class="avatar">
+            <i class="icon-user icon-2x"></i>
+          </a>
+          <div class="content">
+            <div class="pull-right text-muted">${time}</div>
+            <div><a href="###"><strong>${author}</strong></a> <span class="text-muted">回复</span> <a href="###">${to_whom}</a></div>
+            <div class="text">${content}</div>
+            <div class="actions">
+              <a href="##">回复</a>
+            </div>
+          </div>
+        </div>
+   
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="reply-form" id="commentReplyForm2">
+      <a href="###" class="avatar"><i class="icon-user icon-2x"></i></a>
+      <form class="form">
+        <div class="form-group">
+          <textarea class="form-control new-comment-text" rows="2" placeholder="撰写评论..."></textarea>
+        </div>
+        <div class="form-group comment-user">
+          <div class="row">
+            <div class="col-md-3">
+              <span class="pull-right">或者</span>
+              <a href="#">登录</a> &nbsp;<a href="##">注册</a>
+            </div>
+            <div class="col-md-7">
+              <div class="form-group">
+                <input type="text" class="form-control" id="nameInputEmail1" placeholder="输入评论显示名称">
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="输入电子邮件（不会在评论显示）">
+              </div>
+            </div>
+            <div class="col-md-2"><button type="submit" class="btn btn-block btn-primary"><i class="icon-ok"></i></button></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </footer>
+</div>
+
+    <!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- ZUI Javascript组件 -->
+    <script src="js/zui.min.js"></script>
