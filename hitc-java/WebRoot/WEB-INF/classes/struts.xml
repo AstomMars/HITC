@@ -2,28 +2,24 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
 <package name="default" namespace="/" extends="struts-default">  
-     <default-action-ref name="gotopage1" />  
+     <default-action-ref name="index" />  
      
      <action name="index">  
           <result>index.jsp</result>  
      </action>  
-     
-     <action name="gotopage1" class="hitc.hitcAction" method="gotoPage1">  
-    	<result name="success">/page1.jsp</result>
-	 </action>
 	 
 	 <action name="zc" class="hitc.hitcAction" method="zc">
-	    <result name="success" type="chain">fillName</result>
+	    <result name="success" type="chain">_fillName</result>
 	    <result name="error">/zcFail.jsp</result>
 	 </action>
 	 
 	 
 	<action name="login" class="hitc.hitcAction" method="login">
-	    <result name="success" type ="chain">fillName</result>
+	    <result name="success" type ="chain">_fillName</result>
 	    <result name="error">/fail.jsp</result>
 	</action>
      
-     <action name="fillName" class="hitc.hitcAction" method="fillName">
+     <action name="*_fillName" class="hitc.hitcAction" method="fillName">
     	<result>/learn.jsp</result>
 	 </action>
 	 
@@ -46,10 +42,67 @@
     	<result name="error">/fail.jsp</result>
 	 </action>
 	 
-	 <action name="news_branch_*" class="hitc.hitcAction" method=" newsBranch">
+	 <action name="news_branch_*" class="hitc.hitcAction" method="newsBranch">
 	 	<result name="success">learn.jsp</result>
     	<result name="error">/fail.jsp</result>
 	 </action>
+	 
+	 <action name="people" class="hitc.hitcAction" method="people">
+	 	<result name="success">learn.jsp</result>
+	 </action>
+	 
+	 <action name="edition" class="hitc.hitcAction" method="edition">
+	 	<result name="success">learn.jsp</result>
+	 </action>
+	 
+	 <action name="tie" class="hitc.hitcAction" method="tie">
+	 	<result name="success">tie.jsp</result>
+	 </action>
+	 
+	 <action name="inReply" class="hitc.hitcAction" method="inReply">
+	 	<result name="success">inReply.jsp</result>
+	 </action>
+	 
+	 <action name="*_reply" class="hitc.hitcAction" method="reply">
+	 	<result name="success">tie.jsp</result>
+	 </action>
+	 
+	 <action name="*_addt" class="hitc.hitcAction" method="addt">
+	 	<result name="success">addt.jsp</result>
+	 </action>
+	 
+	 
+	  <action name="addedition" class="hitc.hitcAction" method="addEdition">
+	 	<result name="success">adde.jsp</result>
+	  </action>
+	 
+	 
+	 <action name="*_insertedition" class="hitc.hitcAction" method="insertEdition">
+	 	<result name="success">learn.jsp</result>
+	 	<result name="error">fail.jsp</result>
+	 </action>
+	 
+	 <action name="*_insertTie" class="hitc.hitcAction" method="insertTie">
+	 	<result name="success">learn.jsp</result>
+	 </action>
+	 
+	 
+	 <action name="*_friend" class="hitc.hitcAction" method="friend">
+	 	<result name="success">friend.jsp</result>
+	 </action>
+	 
+	 
+	 
+	 <action name="*_addFriend" class="hitc.hitcAction" method="addFriend">
+	 	<result name="success">learn.jsp</result>
+    	<result name="error">/fail.jsp</result>
+	 </action>
+	 
+	 <action name="person_*" class="hitc.hitcAction" method="person">
+	 	<result name="success">person.jsp</result>
+    	<result name="error">/fail.jsp</result>
+	 </action>
+	 
 	 
   </package>
 </struts>    
